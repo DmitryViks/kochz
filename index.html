@@ -35,8 +35,7 @@
         buy.addEventListener("click", () => {
             document.getElementById("main").style.display = "none";
             document.getElementById("form").style.display = "block";
-            let userName = tg.initDataUnsafe.user?.first_name + " " + tg.initDataUnsafe.user?.last_name || "";
-            document.getElementById("user_name").value = userName.trim();
+            document.getElementById("user_name").value = tg.initDataUnsafe.user.first_name + " " + tg.initDataUnsafe.user.last_name;
         });
 
         order.addEventListener("click", (event) => {
